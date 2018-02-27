@@ -5,9 +5,10 @@ var updateTime;
 (updateTime = function () {
     var clock = document.getElementById('time');
     var currentHour = moment().hour();
+    console.log(currentHour);
     if(currentHour > 0 && currentHour <= 5) {
         document.body.className = 'night';
-    } else if(currentHour > 6 && currentHour <= 12){
+    } else if(currentHour >= 6 && currentHour <= 12){
         document.body.className = 'morning';
     } else if(currentHour > 12 && currentHour <= 18){
         document.body.className = 'afternoon';
