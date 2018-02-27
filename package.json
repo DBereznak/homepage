@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DBereznak/homepage/issues"
   },
-  "homepage": "https://github.com/DBereznak/homepage#readme"
+  "homepage": "https://github.com/DBereznak/homepage#readme",
+  "dependencies": {
+  }
+
 }
