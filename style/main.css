@@ -1,4 +1,19 @@
-/* complieDest = ./main.css */
+body.evening {
+  background: #02023D;
+  color: #fff; }
+
+body.morning {
+  background: #FFFA80;
+  color: #240051; }
+
+body.afternoon {
+  background: #00A3F8;
+  color: #fff; }
+
+body.night {
+  background: #001621;
+  color: #CFCFCF; }
+
 body {
   padding: 0;
   margin: 0; }

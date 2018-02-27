@@ -1,7 +1,7 @@
 {
   "name": "homepage",
   "version": "1.0.0",
-  "description": "A better hopage for browsers",
+  "description": "A better homepage for browsers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DBereznak/homepage#readme",
   "dependencies": {
+    "browserify": "^16.1.0",
+    "moment": "^2.20.1"
   }
-
 }
