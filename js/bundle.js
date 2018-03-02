@@ -1,28 +1,62 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
-var moment = require('moment');
+module.exports = {
+    bookmarks: function () {
 
-var updateTime;
+    return [
+        {'name': 'Google Font', 'url': 'https://fonts.google.com/', 'snapshot': './images/google-font.png'},
+        {
+            'name': 'Mozilla Web Docs',
+            'url': 'https://developer.mozilla.org/en-US/',
+            'snapshot': './images/MDN-Docs.png'
+        },
+        {'name': 'Github', 'url': 'https://github.com/DBereznak', 'snapshot': './images/github.png'},
+        // {'name': '', 'url' : '', 'snapshot': ''},
+        // {'name': '', 'url' : '', 'snapshot': ''},
+    ];
+}
+};
+},{}],2:[function(require,module,exports){
+let moment = require('moment');
+let bm = require('../bookmarks/bookmarks');
+let bookmarks = bm.bookmarks();
+let updateTime;
 (updateTime = function () {
-    var clock = document.getElementById('time');
-    var currentHour = moment().hour();
-    console.log(currentHour);
+    let clock = document.getElementById('time');
+    let currentHour = moment().hour();
     if(currentHour > 0 && currentHour <= 5) {
         document.body.className = 'night';
+        document.getElementById('timedMessage').innerHTML = "It is late"
     } else if(currentHour >= 6 && currentHour <= 12){
         document.body.className = 'morning';
-    } else if(currentHour > 12 && currentHour <= 18){
+        document.getElementById('timedMessage').innerHTML = "Good morning"
+    } else if(currentHour >= 12 && currentHour <= 18){
         document.body.className = 'afternoon';
-    } else if(currentHour > 18 && currentHour <= 21){
+        document.getElementById('timedMessage').innerHTML = "Good afternoon"
+    } else if(currentHour >= 18 && currentHour <= 21){
         document.body.className = 'evening';
+        document.getElementById('timedMessage').innerHTML = "Good evening"
     } else{
         document.body.className = 'night';
+        document.getElementById('timedMessage').innerHTML = "Good evening"
     }
     clock.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
 })();
 setInterval(updateTime, 1000);
 
+//BOOKMARKS
+for(let i = 0; i < bookmarks.length; i++){
+    console.log(bookmarks[i].name);
+    let name = bookmarks[i].name;
+    let url = bookmarks[i].url;
+    let image = bookmarks[i].snapshot;
+    let bookmark = `<div class="bookmark">
+                        <a href="${url}" target="_blank">${name}</a>
+                    </div>`;
+    document.getElementById('bookshelf').innerHTML += bookmark;
+}
 
-},{"moment":2}],2:[function(require,module,exports){
+
+},{"../bookmarks/bookmarks":1,"moment":3}],3:[function(require,module,exports){
 //! moment.js
 //! version : 2.20.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -4559,4 +4593,4 @@ return hooks;
 
 })));
 
-},{}]},{},[1]);
+},{}]},{},[2]);

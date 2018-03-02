@@ -1,22 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 body.evening {
   background: #02023D;
   color: #fff; }
 
 body.morning {
-  background: #FFFA80;
-  color: #240051; }
+  background: #fcfbc3; }
+  body.morning .searchGoogle form .search {
+    border: 1px solid #603c43; }
+  body.morning .searchGoogle form button {
+    background: #603c43;
+    color: #b47f6b;
+    border: 1px solid #b47f6b; }
+    body.morning .searchGoogle form button:hover {
+      background: #211517;
+      color: #b47f6b; }
 
 body.afternoon {
-  background: #00A3F8;
-  color: #fff; }
+  background: #9dcedd; }
+  body.afternoon .searchGoogle form .search {
+    border: 1px solid #dfcc45; }
+  body.afternoon .searchGoogle form button {
+    background: #4d441a;
+    color: #dfcc45;
+    border: 1px solid #dfcc45; }
+    body.afternoon .searchGoogle form button:hover {
+      background: #010100; }
 
 body.night {
-  background: #001621;
-  color: #CFCFCF; }
+  background: #21354c;
+  color: #f5fdeb; }
+  body.night .searchGoogle form .search {
+    border: 1px solid #CFCFCF; }
+  body.night .searchGoogle form button {
+    background: #668bbc;
+    color: #01000b;
+    border: 1px solid #f5fdeb; }
+    body.night .searchGoogle form button:hover {
+      background: #395983;
+      color: #f5fdeb; }
 
 body {
   padding: 0;
   margin: 0; }
 
-h1 {
-  text-align: center; }
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 0; }
+  .container h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif; }
+  .container #time {
+    font-family: 'Poppins', sans-serif; }
+  .container .searchGoogle {
+    width: 60%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif; }
+    .container .searchGoogle form {
+      width: 100%; }
+      .container .searchGoogle form .search {
+        width: 100%;
+        height: 20px;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 20px; }
+      .container .searchGoogle form button {
+        border-radius: 6px;
+        width: 100px;
+        min-height: 20px;
+        padding: 10px;
+        text-align: center;
+        -webkit-transition: .2s background ease-out;
+        -o-transition: .2s background ease-out;
+        transition: .2s background ease-out;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1.5px;
+        font-size: 14px;
+        text-transform: uppercase; }
+        .container .searchGoogle form button:hover {
+          cursor: pointer;
+          -webkit-transition: .2s background ease-in;
+          -o-transition: .2s background ease-in;
+          transition: .2s background ease-in; }
+  .container .bookshelf {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .container .bookshelf .bookmark {
+      width: 150px;
+      height: 200px;
+      border: 1px solid #666;
+      border-radius: 6px;
+      margin: 0 10px;
+      background: #d5d5d5; }

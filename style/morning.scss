@@ -1,4 +1,19 @@
 body.morning{
-  background: #FFFA80;
-  color: #240051;
+  background: #fcfbc3;
+  .searchGoogle{
+    form{
+      .search{
+        border: 1px solid #603c43;
+      }
+      button{
+        background: #603c43;
+        color: #b47f6b;
+        border: 1px solid #b47f6b;
+        &:hover{
+          background: darken(#603c43, 20%);
+          color: #b47f6b;
+        }
+      }
+    }
+  }
 }

@@ -1,4 +1,21 @@
 body.night{
-  background: #001621;
-  color: #CFCFCF;
+  background: #21354c;
+  color: #f5fdeb;
+
+  .searchGoogle{
+    form{
+      .search{
+        border: 1px solid #CFCFCF;
+      }
+      button{
+        background: #668bbc;
+        color: #01000b;
+        border: 1px solid #f5fdeb;;
+        &:hover{
+          background: darken(#668bbc, 20%);
+          color: #f5fdeb;
+        }
+      }
+    }
+  }
 }

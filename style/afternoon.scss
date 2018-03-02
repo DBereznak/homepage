@@ -1,4 +1,18 @@
 body.afternoon{
-  background: #00A3F8;
-  color: #fff;
+  background: #9dcedd;
+  .searchGoogle{
+    form{
+      .search{
+        border: 1px solid #dfcc45;
+      }
+      button{
+        background: #4d441a;
+        color: #dfcc45;
+        border: 1px solid #dfcc45;
+        &:hover{
+          background: darken(#4d441a, 20%);
+        }
+      }
+    }
+  }
 }

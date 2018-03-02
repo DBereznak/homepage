@@ -2,10 +2,73 @@
 @import 'morning.scss';
 @import 'afternoon.scss';
 @import 'night.scss';
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 body{
   padding: 0;
   margin: 0;
 }
-h1{
-  text-align: center;
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 0;
+
+  h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  #time {
+    font-family: 'Poppins', sans-serif;
+  }
+  .searchGoogle {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    form {
+      width: 100%;
+      .search {
+        width: 100%;
+        height: 20px;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+      }
+      button {
+        border-radius: 6px;
+        width: 100px;
+        min-height: 20px;
+        padding: 10px;
+        text-align: center;
+        transition: .2s background ease-out;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1.5px;
+        font-size: 14px;
+        text-transform: uppercase;
+        &:hover {
+          cursor: pointer;
+          transition: .2s background ease-in;
+        }
+      }
+    }
+  }
+
+  //BOOKMARKS
+  .bookshelf {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    .bookmark {
+      width: 150px;
+      height: 200px;
+      border: 1px solid #666;
+      border-radius: 6px;
+      margin: 0 10px;
+      background: #d5d5d5;
+    }
+  }
 }
