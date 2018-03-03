@@ -9,7 +9,7 @@ module.exports = {
             'snapshot': './images/MDN-Docs.png'
         },
         {'name': 'Github', 'url': 'https://github.com/DBereznak', 'snapshot': './images/github.png'},
-        // {'name': '', 'url' : '', 'snapshot': ''},
+         {'name': 'CSSmatic', 'url' : 'https://www.cssmatic.com/', 'snapshot': './images/cssMatic.png'},
         // {'name': '', 'url' : '', 'snapshot': ''},
     ];
 }

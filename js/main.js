@@ -32,7 +32,8 @@ for(let i = 0; i < bookmarks.length; i++){
     let url = bookmarks[i].url;
     let image = bookmarks[i].snapshot;
     let bookmark = `<div class="bookmark">
-                        <a href="${url}" target="_blank">${name}</a>
+                        <a href="${url}" target="_blank">${name} <br> <img src="${image}" alt="${name}" width="100%" height="auto"></a>
+                        
                     </div>`;
     document.getElementById('bookshelf').innerHTML += bookmark;
 }

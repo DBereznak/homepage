@@ -107,9 +107,28 @@ body {
     -ms-flex-pack: start;
     justify-content: flex-start; }
     .container .bookshelf .bookmark {
-      width: 150px;
-      height: 200px;
+      width: 300px;
+      padding-top: 30px;
+      margin: 0 10px;
       border: 1px solid #666;
       border-radius: 6px;
-      margin: 0 10px;
-      background: #d5d5d5; }
+      background: #d5d5d5;
+      -webkit-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out; }
+      .container .bookshelf .bookmark a {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        text-decoration: none; }
+        .container .bookshelf .bookmark a img {
+          padding-top: 20px; }
+      .container .bookshelf .bookmark:hover {
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        -webkit-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        transition: all .2s ease-in; }

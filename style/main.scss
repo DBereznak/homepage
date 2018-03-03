@@ -63,12 +63,29 @@ body{
     flex-flow: row wrap;
     justify-content: flex-start;
     .bookmark {
-      width: 150px;
-      height: 200px;
+      width: 300px;
+      padding-top: 30px;
+      margin: 0 10px;
       border: 1px solid #666;
       border-radius: 6px;
-      margin: 0 10px;
       background: #d5d5d5;
+      transition: all .2s ease-out;
+      a{
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        img{
+          padding-top: 20px;
+        }
+      }
+      &:hover{
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+        transition: all .2s ease-in;
+      }
     }
   }
 }

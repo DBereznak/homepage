@@ -10,7 +10,7 @@ module.exports = {
             'snapshot': './images/MDN-Docs.png'
         },
         {'name': 'Github', 'url': 'https://github.com/DBereznak', 'snapshot': './images/github.png'},
-        // {'name': '', 'url' : '', 'snapshot': ''},
+         {'name': 'CSSmatic', 'url' : 'https://www.cssmatic.com/', 'snapshot': './images/cssMatic.png'},
         // {'name': '', 'url' : '', 'snapshot': ''},
     ];
 }
@@ -50,7 +50,8 @@ for(let i = 0; i < bookmarks.length; i++){
     let url = bookmarks[i].url;
     let image = bookmarks[i].snapshot;
     let bookmark = `<div class="bookmark">
-                        <a href="${url}" target="_blank">${name}</a>
+                        <a href="${url}" target="_blank">${name} <br> <img src="${image}" alt="${name}" width="100%" height="auto"></a>
+                        
                     </div>`;
     document.getElementById('bookshelf').innerHTML += bookmark;
 }
